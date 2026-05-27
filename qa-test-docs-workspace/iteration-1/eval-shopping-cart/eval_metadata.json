@@ -1,0 +1,17 @@
+{
+  "eval_id": 2,
+  "eval_name": "eval-shopping-cart",
+  "prompt": "I need a test plan for our iOS shopping cart feature. Here's what it does: users can add items to cart, update quantities (1-99), remove items, apply a discount code, see a running total with tax calculated at 8.5%, and proceed to checkout. The cart persists across sessions. Discount codes can be percentage-off or fixed-amount, and only one can be applied at a time.",
+  "assertions": [
+    "The output specifies iOS as the platform in the Test Plan environment section",
+    "Test scenarios cover adding, updating, and removing items from the cart",
+    "Boundary tests exist for quantity limits (0, 1, 99, 100)",
+    "Test cases cover both percentage-off and fixed-amount discount code types",
+    "A test case or scenario verifies that only one discount code can be applied at a time",
+    "Tax calculation accuracy (8.5%) is tested with specific expected values",
+    "Cart persistence across sessions is covered as a scenario or test case",
+    "The risk assessment includes risks specific to iOS (e.g. payment flow, session handling)",
+    "A Coverage Validation Report is present",
+    "Test steps reference iOS-specific interactions (e.g. 'tap', not 'click')"
+  ]
+}

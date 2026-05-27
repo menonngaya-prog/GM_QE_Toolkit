@@ -1,0 +1,17 @@
+{
+  "eval_id": 3,
+  "eval_name": "eval-profile-settings",
+  "prompt": "Generate test docs for a user profile settings page. Web app, React frontend. Users can: update display name (3-50 chars), change email (requires current password confirmation), upload a profile photo (JPEG/PNG only, max 5MB), toggle email notifications on/off, and delete their account (requires typing 'DELETE' to confirm). Changes save automatically except email change and account deletion which require explicit confirmation.",
+  "assertions": [
+    "Display name boundary tests cover lengths of 2, 3, 50, and 51 characters",
+    "Email change test cases require current password confirmation as a step",
+    "Photo upload tests cover JPEG and PNG (valid) and at least one invalid format (e.g. GIF, PDF)",
+    "A test case covers the 5MB file size limit (just under and just over)",
+    "Account deletion test case includes typing 'DELETE' as an explicit step",
+    "The distinction between auto-save fields and explicit-confirmation fields is reflected in test cases",
+    "At least one negative case covers attempting account deletion without typing 'DELETE' exactly",
+    "Test Strategy includes accessibility testing given the form-heavy UI",
+    "A Coverage Validation Report is present with requirement-to-test mapping",
+    "The output includes a clarification questions section identifying any ambiguities"
+  ]
+}

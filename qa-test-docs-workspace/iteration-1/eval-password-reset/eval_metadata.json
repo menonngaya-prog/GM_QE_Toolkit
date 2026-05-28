@@ -1,0 +1,17 @@
+{
+  "eval_id": 1,
+  "eval_name": "eval-password-reset",
+  "prompt": "Write test cases for a password reset feature. It's a web app. The flow is: user clicks 'Forgot Password' on the login page, enters their email, gets a reset link by email (valid for 60 minutes), clicks the link, sets a new password (min 8 chars, must include a number), and is redirected to the login page. Old password should stop working immediately after reset.",
+  "assertions": [
+    "The output includes a Test Strategy section with scope, testing types table, and risk assessment",
+    "The output includes a Test Plan section with test environment, test phases, and defect severity levels",
+    "Test scenarios are grouped into at least 3 feature areas (e.g. trigger flow, reset link, password validation)",
+    "At least one test case covers the 60-minute link expiry boundary condition",
+    "At least one test case verifies the old password is invalidated after reset",
+    "At least one negative test case covers an unregistered email being submitted",
+    "Test case steps are concrete and specific (not vague like 'navigate to the feature')",
+    "Pass Criteria and Fail Criteria are present and binary for each detailed test case",
+    "A Coverage Validation Report maps requirements to test case/scenario IDs",
+    "Automation candidates are identified"
+  ]
+}

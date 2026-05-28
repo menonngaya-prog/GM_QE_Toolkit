@@ -1,0 +1,59 @@
+{
+  "skill_name": "qa-test-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write test cases for a password reset feature. It's a web app. The flow is: user clicks 'Forgot Password' on the login page, enters their email, gets a reset link by email (valid for 60 minutes), clicks the link, sets a new password (min 8 chars, must include a number), and is redirected to the login page. Old password should stop working immediately after reset.",
+      "expected_output": "A full QA documentation suite including Test Strategy, Test Plan, Test Scenarios grouped by feature area (trigger flow, email delivery, reset link, new password validation, old password invalidation), and Detailed Test Cases with concrete step-by-step actions, Pass/Fail criteria, and a Coverage Validation Report mapping each requirement to test IDs.",
+      "files": [],
+      "assertions": [
+        "The output includes a Test Strategy section with scope, testing types table, and risk assessment",
+        "The output includes a Test Plan section with test environment, test phases, and defect severity levels",
+        "Test scenarios are grouped into at least 3 feature areas (e.g. trigger flow, reset link, password validation)",
+        "At least one test case covers the 60-minute link expiry boundary condition",
+        "At least one test case verifies the old password is invalidated after reset",
+        "At least one negative test case covers an unregistered email being submitted",
+        "Test case steps are concrete and specific (not vague like 'navigate to the feature')",
+        "Pass Criteria and Fail Criteria are present and binary for each detailed test case",
+        "A Coverage Validation Report maps requirements to test case/scenario IDs",
+        "Automation candidates are identified"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need a test plan for our iOS shopping cart feature. Here's what it does: users can add items to cart, update quantities (1-99), remove items, apply a discount code, see a running total with tax calculated at 8.5%, and proceed to checkout. The cart persists across sessions. Discount codes can be percentage-off or fixed-amount, and only one can be applied at a time.",
+      "expected_output": "A full QA documentation suite tailored for iOS covering: cart CRUD operations, quantity validation (boundaries at 1 and 99), discount code logic (percentage vs fixed, one-at-a-time rule), tax calculation accuracy, session persistence, and checkout navigation. Should include both UI/functional and edge case coverage.",
+      "files": [],
+      "assertions": [
+        "The output specifies iOS as the platform in the Test Plan environment section",
+        "Test scenarios cover adding, updating, and removing items from the cart",
+        "Boundary tests exist for quantity limits (0, 1, 99, 100)",
+        "Test cases cover both percentage-off and fixed-amount discount code types",
+        "A test case or scenario verifies that only one discount code can be applied at a time",
+        "Tax calculation accuracy (8.5%) is tested with specific expected values",
+        "Cart persistence across sessions is covered as a scenario or test case",
+        "The risk assessment includes risks specific to iOS (e.g. payment flow, session handling)",
+        "A Coverage Validation Report is present",
+        "Test steps reference iOS-specific interactions (e.g. 'tap', not 'click')"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Generate test docs for a user profile settings page. Web app, React frontend. Users can: update display name (3-50 chars), change email (requires current password confirmation), upload a profile photo (JPEG/PNG only, max 5MB), toggle email notifications on/off, and delete their account (requires typing 'DELETE' to confirm). Changes save automatically except email change and account deletion which require explicit confirmation.",
+      "expected_output": "Full QA documentation with coverage for: display name validation (length boundaries, special chars), email change flow (password confirmation, validation), photo upload (file type, size limits, success state), notification toggle (state persistence), account deletion (confirmation input, irreversibility), and auto-save vs explicit-save distinction.",
+      "files": [],
+      "assertions": [
+        "Display name boundary tests cover lengths of 2, 3, 50, and 51 characters",
+        "Email change test cases require current password confirmation as a step",
+        "Photo upload tests cover JPEG and PNG (valid) and at least one invalid format (e.g. GIF, PDF)",
+        "A test case covers the 5MB file size limit (just under and just over)",
+        "Account deletion test case includes typing 'DELETE' as an explicit step",
+        "The distinction between auto-save fields and explicit-confirmation fields is reflected in test cases",
+        "At least one negative case covers attempting account deletion without typing 'DELETE' exactly",
+        "Test Strategy includes accessibility testing given the form-heavy UI",
+        "A Coverage Validation Report is present with requirement-to-test mapping",
+        "The output includes a clarification questions section identifying any ambiguities"
+      ]
+    }
+  ]
+}
